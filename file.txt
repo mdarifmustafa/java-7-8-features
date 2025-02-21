@@ -1,0 +1,2 @@
+Hello Java 7.
+This is a file for Demo of Java 7!
