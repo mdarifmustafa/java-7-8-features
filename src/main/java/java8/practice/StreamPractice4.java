@@ -1,3 +1,5 @@
+package java8.practice;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +23,7 @@ public class StreamPractice4 {
 //        Exercise 4: Grouping by First Character
         List<String> words2 = Arrays.asList("apple", "banana", "avocado", "blueberry", "cherry", "cranberry");
         Map<Character, List<String>> wordsAsPerCharacter = words2.stream()
-                        .collect(Collectors.groupingBy(s -> s.charAt(0), Collectors.mapping(String::valueOf, Collectors.toList())));
+            .collect(Collectors.groupingBy(s -> s.charAt(0), Collectors.mapping(String::valueOf, Collectors.toList())));
 
 //        Exercise 5: Finding Distinct Elements
         List<Integer> numbers3 = Arrays.asList(1, 2, 2, 3, 4, 4, 5, 5, 6);

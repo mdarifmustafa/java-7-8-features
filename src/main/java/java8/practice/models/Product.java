@@ -1,4 +1,4 @@
-package models;
+package java8.practice.models;
 
 public class Product {
     private int id;

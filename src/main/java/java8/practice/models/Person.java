@@ -1,4 +1,4 @@
-package models;
+package java8.practice.models;
 
 public class Person {
     String firstName;
@@ -28,8 +28,8 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", age=" + age +
-                '}';
+            "firstName='" + firstName + '\'' +
+            ", age=" + age +
+            '}';
     }
 }
