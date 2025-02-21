@@ -1,5 +1,7 @@
-import java.util.List;
+package java8.practice;
+
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -24,7 +26,7 @@ public class StreamPractice2 {
 //        Exercise 4: Grouping
         List<String> words2 = Arrays.asList("apple", "banana", "cherry", "date", "fig", "grape");
         Map<Integer, List<String>> wordsPerLength = words2.stream()
-                        .collect(Collectors.groupingBy(String::length, Collectors.mapping(String::valueOf, Collectors.toList())));
+            .collect(Collectors.groupingBy(String::length, Collectors.mapping(String::valueOf, Collectors.toList())));
 
 //        Exercise 5: Joining
         List<String> words3 = Arrays.asList("apple", "banana", "cherry", "date");

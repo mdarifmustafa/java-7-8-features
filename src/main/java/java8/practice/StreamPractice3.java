@@ -1,3 +1,5 @@
+package java8.practice;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +29,7 @@ public class StreamPractice3 {
 //        Exercise 4: Partitioning vowels
         List<String> words2 = Arrays.asList("apple", "banana", "orange", "grape", "kiwi");
         Map<Boolean, List<String>> booleanAsPerVowels = words2.stream()
-                .collect(Collectors.groupingBy(s -> "aeiou".indexOf(s.charAt(0)) > -1, Collectors.mapping(String::valueOf, Collectors.toList())));
+            .collect(Collectors.groupingBy(s -> "aeiou".indexOf(s.charAt(0)) > -1, Collectors.mapping(String::valueOf, Collectors.toList())));
 
 //        Exercise 5: Joining with Prefix and Suffix
         List<String> words3 = Arrays.asList("one", "two", "three");

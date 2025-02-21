@@ -1,8 +1,9 @@
-import models.Person;
+package java8.practice;
+
+import java8.practice.models.Person;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamPractice5 {
@@ -27,10 +28,10 @@ public class StreamPractice5 {
 
 //        Question 5: Creating a Stream of Custom Objects
         List<Person> people = Arrays.asList(
-                new Person("John", 25),
-                new Person("Jane", 17),
-                new Person("Tom", 20),
-                new Person("Lucy", 16)
+            new Person("John", 25),
+            new Person("Jane", 17),
+            new Person("Tom", 20),
+            new Person("Lucy", 16)
         );
         List<String> adultPeople = people.stream().filter(p -> p.getAge() >= 18).map(Person::getFirstName).collect(Collectors.toList());
 
