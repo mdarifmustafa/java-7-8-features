@@ -19,7 +19,11 @@ public class CustomObjectListSorting {
 
         System.out.println("Before Sorting" + list);
 
+        // soring based on eno
         list.sort((a, b) -> (a.eno > b.eno) ? 1 : (a.eno < b.eno) ? -1 : 0);
+
+        // sorting based on ename
+        list.sort((a, b) -> Integer.compare(a.ename.compareTo(b.ename), 0));
 
         System.out.println("After Sorting" + list);
 

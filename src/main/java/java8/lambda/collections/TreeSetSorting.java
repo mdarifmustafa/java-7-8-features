@@ -5,7 +5,7 @@ import java.util.TreeSet;
 public class TreeSetSorting {
 
     public static void main(String[] args) {
-        TreeSet<Integer> treeSet = new TreeSet<>((a, b) -> a > b ? -1 : a < b ? 1 : 0);
+        TreeSet<Integer> treeSet = new TreeSet<>((a, b) -> a < b ? -1 : a > b ? 1 : 0);
         treeSet.add(50);
         treeSet.add(10);
         treeSet.add(25);
