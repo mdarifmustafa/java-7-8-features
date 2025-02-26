@@ -18,10 +18,8 @@ public class CatchingMultipleExceptions {
             for (int i = 0; i < arr.length + 1; i++) {
                 System.out.println(arr[i]);
             }
-        } catch (NullPointerException npe) {
+        } catch (NullPointerException | ArrayIndexOutOfBoundsException npe) {
             LOGGER.log(Level.SEVERE, npe.toString());
-        } catch (ArrayIndexOutOfBoundsException aioex) {
-            LOGGER.log(Level.SEVERE, aioex.toString());
         }
     }
 

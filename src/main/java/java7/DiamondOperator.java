@@ -6,7 +6,7 @@ import java.util.List;
 public class DiamondOperator {
     public static void main(String[] args) {
         // Before Java 7
-        List<String> list1 = new ArrayList<String>();
+        List<String> list1 = new ArrayList<>();
 
         // Java 7 (Diamond Operator)
         List<String> list2 = new ArrayList<>();
