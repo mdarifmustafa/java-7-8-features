@@ -27,12 +27,12 @@ public class Basic {
 
         // Even you can get this whole set of values i.e. dd,MM,yyyy hh:mm:ss:nn using dateTime variable directly instead of getting from separated variable date and time.
 
-        System.out.printf("%d:%d:%d:%d", hh, mm, ss, nn);
+        System.out.printf("%d:%d:%d:%d%n", hh, mm, ss, nn);
 
         // creating new LocalDateTime object using above micro variables
         LocalDateTime newLocalDateTime = LocalDateTime.of(yyyy, Month.MAY, dd, hh, mm, ss, nn);
 
-        System.out.println(newLocalDateTime);
+        System.out.println("newLocalDateTime is: " + newLocalDateTime);
 
         System.out.println("6 months earlier date: " + newLocalDateTime.minusMonths(6));
         System.out.println("3 months after date: " + newLocalDateTime.plusMonths(3));

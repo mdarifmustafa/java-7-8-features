@@ -33,12 +33,10 @@ public class Basic {
 
         List<Integer> filteredList = list.stream().filter(I -> I % 2 == 0).collect(Collectors.toList());
         List<Integer> mappedList = list.stream().map(I -> I * 2).collect(Collectors.toList());
-
-        Stream mapStream = list.stream().filter(I -> I / 3 > 5);
-
         System.out.println("filteredList: " + filteredList);
         System.out.println("mappedList: " + mappedList);
 
+        Stream mapStream = list.stream().filter(I -> I / 3 > 5);
         mapStream.forEach(I -> System.out.println(I));
 
         List<String> actors = new ArrayList<>();
@@ -62,11 +60,11 @@ public class Basic {
 
 //        Filtering using Predicate object reference
         List<String> bigNamesActor = actors.stream().filter(filterNameLength::test).collect(Collectors.toList());
-        System.out.println(bigNamesActor);
+        System.out.println("bigNamesActor are : " + bigNamesActor);
 
 //        Separating name and putting space in between, wherever it is letter caps.
         bigNamesActor = bigNamesActor.stream().map(separateCaps::apply).collect(Collectors.toList());
-        System.out.println(bigNamesActor);
+        System.out.println("bigNamesActor are: " + bigNamesActor);
 
 //        let's do this all above things in one line
         List<String> oneLineResult = actors.stream().filter(s -> s.length() >= 9).map(s -> {
@@ -80,7 +78,7 @@ public class Basic {
             }
             return result;
         }).map(String::toUpperCase).collect(Collectors.toList());
-        System.out.println(oneLineResult);
+        System.out.println("oneLineResult is: " + oneLineResult);
 
         // total count of objects, count is a method based on stream, which returns Long type
         long count = actors.stream().filter(s -> s.length() >= 9).count();
@@ -110,13 +108,16 @@ public class Basic {
 
 //        Converting ArrayList to toArray using Constructor reference
         Integer[] numbersArray = list.stream().toArray(Integer[]::new);
+        System.out.println("\n\n1. numbersArray : ");
         for (Integer number : numbersArray) {
-            System.out.println(number);
+            System.out.print(number + " ");
         }
 
 //        Stream.of() method we can apply for group of object, values and for arrays
-        Stream.of(numbersArray).forEach(System.out::println); // applied over arrayObject
+        System.out.println("\n\n2. numbersArray : ");
+        Stream.of(numbersArray).forEach(System.out::print); // applied over arrayObject
 
+        System.out.println("\n\n3. numberStream : ");
         Stream<Integer> numberStream = Stream.of(9, 99, 999, 9999, 99999, 999999); // group of values
         numberStream.forEach(System.out::println);
 

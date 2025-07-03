@@ -6,7 +6,7 @@ import java.util.TreeMap;
 public class TreeMapSorting {
 
     public static void main(String[] args) {
-        Map<Integer, String> map = new TreeMap<>((a, b) -> (a > b) ? -1 : (a < b) ? 1 : 0);
+        Map<Integer, String> map = new TreeMap<>((a, b) -> (a > b) ? 1 : (a < b) ? -1 : 0);
         map.put(50, "Arif");
         map.put(10, "Suhail");
         map.put(25, "Wahid");

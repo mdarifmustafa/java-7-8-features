@@ -31,9 +31,9 @@ interface Right {
 
 public class TestDefaultWithDiamondProblem implements Left, Right {
 
-    // you can tackle diamond problem using default methods but can't do with abstract method directly in implementation class.
+    // you can tackle a diamond problem using default methods but can't do with abstract method directly in implementation class.
     // you can use without implementation and also could override under class and also if not required then not use.
-    // when you tackle diamond problem, you must write one override method.
+    // when you tackle a diamond problem, you must write one override method.
 
     public static void main(String[] args) {
         TestDefaultWithDiamondProblem testObject = new TestDefaultWithDiamondProblem();

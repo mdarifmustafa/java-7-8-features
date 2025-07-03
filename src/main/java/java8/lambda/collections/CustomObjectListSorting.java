@@ -26,6 +26,5 @@ public class CustomObjectListSorting {
         list.sort((a, b) -> Integer.compare(a.ename.compareTo(b.ename), 0));
 
         System.out.println("After Sorting" + list);
-
     }
 }

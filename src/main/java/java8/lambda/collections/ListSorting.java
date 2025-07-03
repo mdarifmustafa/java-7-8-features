@@ -14,8 +14,10 @@ public class ListSorting {
         list.add(39);
         list.add(0);
 
-        Collections.sort(list, (a, b) -> a < b ? -1 : a > b ? 1 : 0);
+        Collections.sort(list, (a, b) -> a > b ? 1 : a < b ? -1 : 0);
+        System.out.println(list);
 
+        Collections.sort(list, (a, b) -> Integer.compare(a, b));
         System.out.println(list);
     }
 
